@@ -64,32 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-新建文本文档" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/04191999.github.io/2020/09/17/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" class="article-date">
-  <time datetime="2020-09-17T05:30:52.791Z" itemprop="datePublished">2020-09-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://74hc138.com/2020/09/17/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" data-id="ckf6dm20a0000dguw28n2es81" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-1 Spring的入门程序" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/04191999.github.io/2020/09/17/1%20Spring%E7%9A%84%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/" class="article-date">
@@ -110,7 +84,7 @@
 <li>在src目录下创建配置文件applicationContext.xml以实现接口UserDao。</li>
 <li>创建测试类TestIoc，在类中编写main方法。在mian中首先通过ClassPathXmlApplicationContex加载创建好的配置文件applicationContext.xml以实现beanfactory的子接口ApplicationContex，即完成Spring容器初始化。然后通过容器获取userDao实例，最后调用uesrDao的say方法。</li>
 </ol>
-<h2 id="1-3程序效果截图"><a href="#1-3程序效果截图" class="headerlink" title="1.3程序效果截图"></a>1.3程序效果截图</h2><p>![1](1 Spring的入门程序.assets/1.jpg)</p>
+<h2 id="1-3程序效果截图"><a href="#1-3程序效果截图" class="headerlink" title="1.3程序效果截图"></a>1.3程序效果截图</h2><p>![1](1 Spring的入门程序.assets/1.png)</p>
 <h2 id="1-4代码"><a href="#1-4代码" class="headerlink" title="1.4代码"></a>1.4代码</h2><h3 id="UserDao-java"><a href="#UserDao-java" class="headerlink" title="UserDao.java"></a>UserDao.java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> xhu.edu;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserDao</span> </span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span> </span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="UserDaoImpl-java"><a href="#UserDaoImpl-java" class="headerlink" title="UserDaoImpl.java"></a>UserDaoImpl.java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> xhu.edu;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl</span> <span class="keyword">implements</span> <span class="title">UserDao</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    System.out.println(</span><br><span class="line">        <span class="string">&quot;userDao sayhelloworld!&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -127,7 +101,7 @@
 <li>配置配置文件applicationContext.xml以实例化UserServiceImpl类的信息并且将userDao的实例注入到userService中。</li>
 <li>创建测试类TestDI，在其中定义main方法，在main中先完成Spring容器的初始化和加载配置文件，然后通过容器获取UserService实例，最后调用实例中的say()方法。</li>
 </ol>
-<h2 id="2-3程序效果截图"><a href="#2-3程序效果截图" class="headerlink" title="2.3程序效果截图"></a>2.3程序效果截图</h2><p>![2](1 Spring的入门程序.assets/2.jpg)</p>
+<h2 id="2-3程序效果截图"><a href="#2-3程序效果截图" class="headerlink" title="2.3程序效果截图"></a>2.3程序效果截图</h2><p>![2](1 Spring的入门程序.assets/2.png)</p>
 <h2 id="2-4代码"><a href="#2-4代码" class="headerlink" title="2.4代码"></a>2.4代码</h2><h3 id="UserService-java"><a href="#UserService-java" class="headerlink" title="UserService.java"></a>UserService.java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> xhu.edu;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="UserServiceIpml-java"><a href="#UserServiceIpml-java" class="headerlink" title="UserServiceIpml.java"></a>UserServiceIpml.java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> xhu.edu;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl</span>  <span class="keyword">implements</span> <span class="title">UserService</span></span>&#123;</span><br><span class="line">  <span class="keyword">private</span> UserDao userDao;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUserDao</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.userDao=userDao;   </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.userDao.say();</span><br><span class="line">  System.out.println(</span><br><span class="line">      userDaoservice say helloworld!<span class="string">&quot;);</span></span><br><span class="line"><span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
@@ -142,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://74hc138.com/2020/09/17/1%20Spring%E7%9A%84%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/" data-id="ckf6dm20o0001dguwd1z74ur2" class="article-share-link">Share</a>
+      <a data-url="http://74hc138.com/2020/09/17/1%20Spring%E7%9A%84%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/" data-id="ckf6esmzf0001x0uw437uc8uj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,7 +165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://74hc138.com/2020/09/04/hello-world/" data-id="ckf6dm20p0002dguwft5dahp9" class="article-share-link">Share</a>
+      <a data-url="http://74hc138.com/2020/09/04/hello-world/" data-id="ckf6esmz20000x0uw74ha4ym3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,10 +204,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/04191999.github.io/2020/09/17/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/">(no title)</a>
-          </li>
         
           <li>
             <a href="/04191999.github.io/2020/09/17/1%20Spring%E7%9A%84%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/">(no title)</a>
